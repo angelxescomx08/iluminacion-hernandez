@@ -193,17 +193,3 @@ export const orderDiscounts = createTable("order_discounts", (d) => ({
 	amount: d.real().notNull(),
 	...commonColumns,
 }), (t) => [primaryKey({ columns: [t.orderId, t.discountId] })])
-
-export const paymentMethods = createTable("payment_method", (d) => ({
-	id: d.varchar({ length: 255 }).notNull().primaryKey(),
-	userId: d.varchar({ length: 255 }).notNull().references(() => users.id),
-	stripeCustomerId: d.varchar({ length: 255 }),
-	stripePaymentMethodId: d.varchar({ length: 255 }),
-	type: d.varchar({ length: 255 }),
-	brand: d.varchar({ length: 255 }),
-	last4: d.varchar({ length: 4 }),
-	expMonth: d.integer().notNull(),
-	expYear: d.integer().notNull(),
-	isDefault: d.boolean().notNull().default(false),
-	...commonColumns,
-}))
