@@ -52,7 +52,7 @@ export function MainHero() {
 						className="swiper-slide-text swiper-slide-text-48d3 drop-shadow-md"
 						data-swiper-parallax="-100"
 					>
-						Somos una empresa con más de 14 años iluminando hogares
+						Somos una empresa con más de 15 años iluminando hogares
 					</div>
 				</div>
 			</SwiperSlide>
