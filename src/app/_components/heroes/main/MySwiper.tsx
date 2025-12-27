@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { A11y, Autoplay, Navigation, Parallax } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import EffectSuperFlow from "./effect-super-flow.esm.js";
+import EffectSuperFlow from "./effect-super-flow";
 import "swiper/css";
 import "swiper/css/a11y";
 import "swiper/css/autoplay";
