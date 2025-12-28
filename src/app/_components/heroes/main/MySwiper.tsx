@@ -42,14 +42,14 @@ export function MainHero() {
 
 				<div className="swiper-slide-content super-flow-content swiper-slide-content-2f5e">
 					<div
-						className="swiper-slide-text swiper-slide-text-66a3 drop-shadow-md"
+						className="swiper-slide-text swiper-slide-text-66a3 text-shadow-black/80 text-shadow-xl text-sm! md:text-2xl! xl:text-5xl!"
 						data-swiper-parallax="-100"
 					>
 						Elegancia que ilumina con calidez
 					</div>
 
 					<div
-						className="swiper-slide-text swiper-slide-text-48d3 drop-shadow-md"
+						className="swiper-slide-text swiper-slide-text-48d3 text-shadow-black/80 text-shadow-xl text-xs! md:text-md! xl:text-2xl!"
 						data-swiper-parallax="-100"
 					>
 						Somos una empresa con más de 15 años iluminando hogares
@@ -72,14 +72,14 @@ export function MainHero() {
 
 				<div className="swiper-slide-content super-flow-content swiper-slide-content-2f5e">
 					<div
-						className="swiper-slide-text swiper-slide-text-66a3 drop-shadow-md"
+						className="swiper-slide-text swiper-slide-text-66a3 text-shadow-black/80 text-shadow-xl text-sm! md:text-2xl! xl:text-5xl!"
 						data-swiper-parallax="-100"
 					>
 						Diseño, elegancia y luz
 					</div>
 
 					<div
-						className="swiper-slide-text swiper-slide-text-48d3 drop-shadow-md"
+						className="swiper-slide-text swiper-slide-text-48d3 text-shadow-black/80 text-shadow-xl text-xs! md:text-md! xl:text-2xl!"
 						data-swiper-parallax="-100"
 					>
 						Somos una empresa mexicana experta en iluminación decorativa y
@@ -103,14 +103,14 @@ export function MainHero() {
 
 				<div className="swiper-slide-content super-flow-content swiper-slide-content-2f5e">
 					<div
-						className="swiper-slide-text swiper-slide-text-66a3 drop-shadow-md"
+						className="swiper-slide-text swiper-slide-text-66a3 text-shadow-black/80 text-shadow-xl text-sm! md:text-2xl! xl:text-5xl!"
 						data-swiper-parallax="-100"
 					>
 						Iluminación que transforma espacios
 					</div>
 
 					<div
-						className="swiper-slide-text swiper-slide-text-48d3 drop-shadow-md"
+						className="swiper-slide-text swiper-slide-text-48d3 text-shadow-black/80 text-shadow-xl text-xs! md:text-md! xl:text-2xl!"
 						data-swiper-parallax="-100"
 					>
 						Soluciones en lámparas y luminarias para cada rincón de tu hogar
