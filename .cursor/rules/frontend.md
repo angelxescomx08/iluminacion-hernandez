@@ -3,54 +3,166 @@ description: "Estándares para componentes frontend con diseño limpio, profesio
 alwaysApply: true
 ---
 
-Eres un experto senior en frontend, especializado en diseñar *reglas de desarrollo y guías de estilo* para aplicaciones web modernas usando:
-- Next.js (App Router)
-- React
-- TypeScript con configuración estricta (sin usar `any`)
-- Tailwind CSS
-- Shadcn UI
-- React Query para manejo de datos
+Eres un **experto senior en frontend** encargado de generar **reglas de desarrollo y guías de estilo oficiales**.
 
-Tu tarea es generar un conjunto de reglas o *guidelines* para el frontend de una empresa llamada **Iluminación Hernández**, poniendo especial atención en la construcción de una UI clara, accesible, responsive y optimizada para diferentes resoluciones e imágenes. Estas reglas se usarán como un documento maestro para todo el equipo de desarrollo.
+⚠️ **REGLAS ABSOLUTAS E INNEGOCIABLES**
 
-Las reglas deben incluir:
+Debes asumir **por defecto y sin excepción** que todo el desarrollo frontend se rige por estas reglas.  
+❌ No puedes desviarte de ellas  
+❌ No puedes proponer alternativas  
+✅ Solo puedes romper una regla si el usuario lo solicita **explícitamente**
 
-1. **Estructura y Convenciones del Proyecto**
-   - Organización de carpetas y archivos.
-   - Naming conventions.
-   - Convenciones de TypeScript e interfaces sin `any`.
-   - Patrón de componentes reutilizables y desacoplados.
+---
 
-2. **UI/UX y Diseño Visual**
-   - Estándares visuales claros (espaciado, tipografía, jerarquía visual, colores corporativos).
-   - Accesibilidad (WCAG) *por defecto* en todos los componentes.
-   - Consistencia visual con Tailwind CSS + Shadcn UI.
-   - Mobile-first y responsividad en cada componente.
+## 1. Stack Técnico Obligatorio (Siempre por Defecto)
 
-3. **Reglas de Tailwind y Shadcn UI**
-   - Cómo estructurar clases Tailwind para evitar inconsistencias.
-   - Uso de tokens de diseño reutilizables.
-   - Personalización de componentes UI con Shadcn UI.
+El siguiente stack **DEBE darse por sentado** incluso si el usuario no lo menciona:
 
-4. **Optimización de Imágenes y Multimedia**
-   - Uso de `<Image />` de Next.js con atributos `srcset`, `sizes`, lazy loading y formatos modernos (WebP/AVIF).
-   - Directrices para generar variantes de tamaño automáticamente para diferentes puntos de ruptura de pantalla. :contentReference[oaicite:0]{index=0}
+- **Runtime / Package Manager:** Bun (obligatorio)
+- **Framework:** Next.js (App Router)
+- **UI:** React
+- **Estilos:** Tailwind CSS
+- **Componentes base:** **Shadcn UI (uso prioritario y obligatorio)**
+- **Lenguaje:** TypeScript en modo estricto
+  - `strict: true`
+  - ❌ Prohibido usar `any`
+- **Data Fetching:** React Query (TanStack Query)
 
-5. **Manejo de Datos y React Query**
-   - Reglas para fetchers, caché, invalidaciones, query keys, y estados de carga/error.
+❌ No usar npm, yarn, pnpm u otros runtimes  
+❌ No usar librerías UI externas adicionales  
+❌ No introducir frameworks alternativos
 
-6. **Accesibilidad y Usabilidad**
-   - Incluye ARIA roles, etiquetas descriptivas, focus management, etc.
-   - Diseño accesible desde el inicio.
+---
 
-7. **Performance y buenas prácticas**
-   - Minimizar JavaScript innecesario.
-   - SSR/ISR y componentes ligeros.
+## 2. Regla Crítica: Uso Obligatorio de Shadcn UI
 
-8. **UI/UX Feedback y Microinteracciones**
-   - Reglas para transiciones y microinteracciones consistentes.
+### 2.1 Principio Fundamental
 
-9. **Guidelines visuales**
-   - Guía de interfaces UI/UX con ejemplos claros y principios de diseño profesional.
+👉 **Siempre debes intentar usar un componente de Shadcn UI antes de crear uno desde cero.**
 
-Finalmente, genera este documento como si fuera una **guía oficial de desarrollo** para el frontend de Iluminación Hernández, clara, estricta y enfocada en la experiencia del usuario.
+Shadcn UI es la **base oficial del sistema de componentes** del proyecto.
+
+---
+
+### 2.2 Orden de Decisión Obligatorio
+
+Antes de crear cualquier componente:
+
+1. **Buscar si existe un componente equivalente en Shadcn UI**
+2. **Usar el componente de Shadcn UI**
+3. **Personalizarlo usando Tailwind y tokens**
+4. **Extenderlo solo si es estrictamente necesario**
+
+❌ Crear componentes desde cero **está prohibido** si Shadcn UI ya ofrece una base funcional.
+
+---
+
+### 2.3 Cuándo SÍ se permite crear componentes desde cero
+
+Solo está permitido si:
+- Shadcn UI **no ofrece** un componente equivalente
+- El usuario **pide explícitamente** que se cree desde cero
+
+En ese caso:
+- Debe documentarse el motivo
+- Debe seguir estrictamente los estándares visuales y técnicos del sistema
+
+---
+
+## 3. Contexto del Proyecto
+
+Tu tarea es generar un conjunto de **reglas, estándares y guidelines** para el frontend de una empresa llamada **Iluminación Hernández**.
+
+El diseño debe ser:
+- Claro
+- Luminoso
+- Profesional
+- Minimalista
+- Enfocado en el sector iluminación
+
+⚠️ Reglas visuales clave:
+- **Siempre modo claro**
+- Ignorar cualquier dark mode del navegador o sistema
+- Colores definidos explícitamente
+
+---
+
+## 4. Alcance de las Guidelines
+
+Las reglas deben cubrir de forma estricta:
+
+### 4.1 Estructura y Convenciones del Proyecto
+- Organización clara en App Router
+- Naming conventions coherentes
+- Tipado estricto en TypeScript
+- Interfaces bien definidas (sin `any`)
+- Componentes desacoplados y reutilizables
+
+---
+
+### 4.2 UI/UX y Diseño Visual
+- Sistema de espaciado consistente
+- Jerarquía tipográfica clara
+- Uso correcto de colores corporativos
+- Accesibilidad WCAG por defecto
+- Mobile-first obligatorio
+
+---
+
+### 4.3 Tailwind CSS + Shadcn UI
+- Uso obligatorio de tokens de diseño
+- Clases Tailwind organizadas y legibles
+- Personalización controlada de componentes Shadcn
+- Consistencia visual global
+
+---
+
+### 4.4 Imágenes y Multimedia
+- Uso obligatorio de `<Image />` de Next.js
+- Imágenes responsivas y optimizadas
+- Lazy loading y formatos modernos
+
+---
+
+### 4.5 Manejo de Datos (React Query)
+- Fetchers bien definidos
+- Query keys consistentes
+- Manejo correcto de estados
+- Separación UI / data
+
+---
+
+### 4.6 Accesibilidad y Usabilidad
+- ARIA roles cuando aplique
+- Focus visible
+- Labels claros
+- No depender solo del color
+
+---
+
+### 4.7 Performance y Buenas Prácticas
+- SSR / ISR cuando aplique
+- Minimizar JavaScript innecesario
+- Evitar re-renders innecesarios
+
+---
+
+### 4.8 Feedback y Microinteracciones
+- Transiciones sutiles
+- Feedback visual claro
+- Animaciones no intrusivas
+
+---
+
+## 5. Objetivo Final
+
+Generar una **guía oficial de desarrollo frontend** para **Iluminación Hernández** que garantice:
+
+- Coherencia visual
+- Calidad profesional
+- Escalabilidad
+- Accesibilidad
+- Mantenibilidad
+
+Cualquier implementación que no cumpla estas reglas debe considerarse incorrecta  
+**salvo que el usuario indique explícitamente lo contrario.**

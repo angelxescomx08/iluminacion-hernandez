@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { Geist } from "next/font/google";
 
 import { TRPCReactProvider } from "@/trpc/react";
+import { Header } from "./_components/header";
 
 export const metadata: Metadata = {
 	title: "Iluminación Hernández",
@@ -20,9 +21,12 @@ export default function RootLayout({
 	children,
 }: Readonly<{ children: React.ReactNode }>) {
 	return (
-		<html className={`${geist.variable}`} lang="en">
+		<html className={`${geist.variable}`} lang="es">
 			<body>
-				<TRPCReactProvider>{children}</TRPCReactProvider>
+				<TRPCReactProvider>
+					<Header />
+					<main className="min-h-[calc(100vh-4rem)]">{children}</main>
+				</TRPCReactProvider>
 			</body>
 		</html>
 	);
