@@ -1,13 +1,11 @@
 import { HydrateClient } from "@/trpc/server";
-import { MainHero } from "./_components/heroes/main/MySwiper";
+import Hero from "./_components/Hero";
 
 export default async function Home() {
 	return (
 		<HydrateClient>
 			<main className="">
-				<div className="max-h-dvh">
-					<MainHero />
-				</div>
+				<Hero />
 			</main>
 		</HydrateClient>
 	);

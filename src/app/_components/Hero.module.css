@@ -1,0 +1,71 @@
+.heroSection {
+  position: relative;
+  width: 100%;
+  height: 100dvh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heroImageContainer {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.heroImage {
+  object-fit: cover;
+  animation: syncZoom 10s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+.heroText {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  padding: 0 1rem;
+  animation: syncSlide 10s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+/* Animaciones sincronizadas */
+
+@keyframes syncZoom {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.15);
+  }
+}
+
+@keyframes syncSlide {
+  from {
+    transform: translateX(-3%);
+  }
+  to {
+    transform: translateX(3%);
+  }
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .heroText {
+    animation: syncSlideMobile 10s ease-in-out infinite alternate;
+  }
+
+  .heroImage {
+    animation-duration: 12s;
+  }
+
+  @keyframes syncSlideMobile {
+    from {
+      transform: translateX(-15px);
+    }
+    to {
+      transform: translateX(15px);
+    }
+  }
+}
